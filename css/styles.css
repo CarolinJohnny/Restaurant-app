@@ -148,14 +148,14 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  width: 355px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  min-height: 350px;
   min-width: 100%;
 }
 #restaurants-list li h1 {
@@ -275,4 +275,29 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #483e3e;
+}
+
+/* ---RESPONSIVE--- */
+@media screen and (max-width: 600px) {
+	
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
 }
