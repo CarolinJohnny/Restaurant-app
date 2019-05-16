@@ -283,7 +283,7 @@ nav h1 a {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
-  width: 50%;
+  width: 40%;
 }
 
 #reviews-container {
@@ -359,7 +359,6 @@ nav h1 a {
     flex: wrap;
     height: 20%;
     position: relative;
-    /*relative*/
     top: auto;
     width: 100%;
   }
@@ -395,20 +394,29 @@ nav h1 a {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media (min-width: 640px) and (max-width: 1024px) {
-  #restaurants-list li {
-    width: 45%;
-  }
+@media (min-width: 768px) and (max-width: 1000px){
+	#breadcrumb {
+		width: 100%;
+	}
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 992px) {}
+@media (min-width: 640px) and (max-width: 1000px) {
+  #restaurants-list li {
+    width: 50%;
+  }
+	#reviews-list li, #reviews-container {
+		width: 80%;
+	}
+	#breadcrumb {
+		width: 89.4%;
+	}
+}
+@media (min-width: 1001px) and (max-width: 1025px) {
+#breadcrumb {
+	width: 42.2%;
+}
+}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
   #restaurants-list li {
     width: 30%;
