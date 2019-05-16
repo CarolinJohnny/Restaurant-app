@@ -61,7 +61,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== Navigation ====================== */
 nav {
   display: flex;
-  /* */
   width: 100%;
   height: 80px;
   background-color: #c53b6f;
@@ -127,7 +126,6 @@ nav h1 a {
   background-color: #48ab8b;
   align-items: center;
   text-align: center;
-  /* */
 }
 
 .filter-options h2 {
@@ -173,7 +171,6 @@ nav h1 a {
   min-height: 380px;
   padding: 0 0px 18px;
   text-align: center;
-  /*	max-width: 30%;  /* */
 }
 
 #restaurants-list .restaurant-img {
@@ -401,7 +398,7 @@ nav h1 a {
 }
 
 @media (min-width: 640px) and (max-width: 1024px) {
-	#restaurants-list li {
+  #restaurants-list li {
     width: 45%;
   }
 
