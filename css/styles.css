@@ -394,27 +394,30 @@ nav h1 a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1000px){
-	#breadcrumb {
-		width: 100%;
-	}
+@media (min-width: 768px) and (max-width: 1000px) {
+  #breadcrumb {
+    width: 100%;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 1000px) {
   #restaurants-list li {
     width: 50%;
   }
-	#reviews-list li, #reviews-container {
-		width: 80%;
-	}
-	#breadcrumb {
-		width: 89.4%;
-	}
+
+  #reviews-list li, #reviews-container {
+    width: 80%;
+  }
+
+  #breadcrumb {
+    width: 89.4%;
+  }
 }
+
 @media (min-width: 1001px) and (max-width: 1025px) {
-#breadcrumb {
-	width: 42.2%;
-}
+  #breadcrumb {
+    width: 42.2%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
