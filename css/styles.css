@@ -400,9 +400,9 @@ nav h1 a {
   }
 }
 
-@media (min-width: 640px) and (max-width: 1000px) {
-  #restaurants-list li {
-    width: 50%;
+@media (min-width: 640px) and (max-width: 1024px) {
+	#restaurants-list li {
+    width: 45%;
   }
 
   #reviews-list li, #reviews-container {
