@@ -1,9 +1,10 @@
+var staticCacheName = "restaurant-static-v2";
 
 self.addEventListener('install', function(event){
   event.waitUntil(
-    caches.open("cacheRestaurantReview".then(function(cache){
+    caches.open(staticCacheName).then(function(cache){
       return cache.addAll([
-        './',
+        '/',
         './index.html',
         '/restaurant.html',
         '/css/styles.css',
@@ -18,21 +19,22 @@ self.addEventListener('install', function(event){
         './img/8.jpg',
         './img/9.jpg',
         '/img/10.jpg',
-        '/js/dbhelper.js',
+        '/dbhelper.js',
         '/js/main.js',
         '/js/restaurant_info.js',
         '/js/sw_registration.js',
       ]);
-    });
+    })
   );
 });
 
  self.addEventListener('activate', function(event){
   event.waitUntil(
-    caches.keys().then(function(allCaches){
+    caches.keys().then(function(cacheNames) {
       return Promise.all(
-        allCaches.filter(function(cacheName){
-         return cacheName === "cacheRestaurantReview";
+        cacheNames.filter(function(cacheName){
+          return cacheName.startsWith('Restaurant-') &&
+           cacheName != staticCacheName;
         }).map(function(cacheName){
           return caches.delete(cacheName);
         })
@@ -41,7 +43,7 @@ self.addEventListener('install', function(event){
   );
 });
 
-self.addEventListener('fetch', (event) => {
+ /* self.addEventListener('fetch', (event) => {
   if (response) {
     return response;
   }
@@ -52,4 +54,13 @@ self.addEventListener('fetch', (event) => {
     console.log(error);
     return;
   })
+}); */
+
+self.addEventListener('fetch', function(event) {
+	event.respondWith(
+		caches.match(event.request).then(function(response) {
+			if (response) return response;
+      return fetch(event.request);
+		})
+	);
 });
