@@ -1,5 +1,5 @@
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('js/sw.js')
+  navigator.serviceWorker.register('sw.js')
     .then(function() {
       console.log('Yay!');
     })
@@ -7,20 +7,20 @@ if (navigator.serviceWorker) {
       console.log('Boo!');
     });
 }
- navigator.serviceWorker.register('js/sw.js').then(function(registration) {
+ navigator.serviceWorker.register('sw.js').then(function(registration) {
     if (registration.installing) {
         // Service Worker is Installing
     }
 })
 
-navigator.serviceWorker.register('js/sw.js').then(function(registration) {
+navigator.serviceWorker.register('sw.js').then(function(registration) {
     if (registration.waiting) {
         // Service Worker is Waiting
     }
 })
 
-navigator.serviceWorker.register('js/sw.js').then(function(registration) {
+navigator.serviceWorker.register('sw.js').then(function(registration) {
     if (registration.active) {
         // Service Worker is Active
     }
-})  
+})

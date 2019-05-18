@@ -19,7 +19,7 @@ self.addEventListener('install', function(event){
         '/img/8.jpg',
         '/img/9.jpg',
         '/img/10.jpg',
-        './dbhelper.js',
+        '/js/dbhelper.js',
         '/js/main.js',
         '/js/restaurant_info.js',
         '/js/sw_registration.js',
@@ -43,7 +43,7 @@ self.addEventListener('install', function(event){
   );
 });
 
- /* self.addEventListener('fetch', (event) => {
+/*self.addEventListener('fetch', (event) => {
   if (response) {
     return response;
   }
@@ -54,8 +54,8 @@ self.addEventListener('install', function(event){
     console.log(error);
     return;
   })
-}); */
-
+});
+*/
 self.addEventListener('fetch', function(event) {
 	event.respondWith(
 		caches.match(event.request).then(function(response) {
