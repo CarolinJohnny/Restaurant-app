@@ -125,10 +125,9 @@ updateRestaurants = () => {
 }
 
 /**
- * Clear current restaurants, their HTML and remove their map markers.
- */
+ * Clear current restaurants, their HTML and remove their map markers.*/
 resetRestaurants = (restaurants) => {
-  // Remove all restaurants
+    // Remove all restaurants
   self.restaurants = [];
   const ul = document.getElementById('restaurants-list');
   ul.innerHTML = '';

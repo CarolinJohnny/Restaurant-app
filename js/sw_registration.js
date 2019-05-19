@@ -7,7 +7,7 @@ if (navigator.serviceWorker) {
       console.log('Boo!');
     });
 }
- navigator.serviceWorker.register('sw.js').then(function(registration) {
+/* navigator.serviceWorker.register('sw.js').then(function(registration) {
     if (registration.installing) {
         // Service Worker is Installing
     }
@@ -23,4 +23,4 @@ navigator.serviceWorker.register('sw.js').then(function(registration) {
     if (registration.active) {
         // Service Worker is Active
     }
-})
+}) */

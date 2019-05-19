@@ -89,9 +89,9 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.setAttribute("role","img");
+  image.setAttribute("role", "img");
   image.alt = restaurant.name + " Restaurant";
-  
+
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -132,7 +132,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
-  title.setAttribute("tabindex","0");
+  title.setAttribute("tabindex", "0");
 
   if (!reviews) {
     const noReviews = document.createElement('p');
@@ -174,7 +174,7 @@ createReviewHTML = (review) => {
 /**
  * Add restaurant name to the breadcrumb navigation menu
  */
-fillBreadcrumb = (restaurant=self.restaurant) => {
+fillBreadcrumb = (restaurant = self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
