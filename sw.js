@@ -48,21 +48,22 @@ self.addEventListener('fetch', (event) => {
   if (response) {
     return response;
   }
-  return caches.open('cacheRestaurantReview').then(cache => {
+  return caches.open(staticCacheName).then(cache => {
     cache.put(event.request.url, networkResponse.clone());
     return networkResponse;
   }).catch(error => {
     console.log(error);
     return;
   })
+);
 });
-*/
+}); */
+
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
-      if (response) return response;
-      return fetch(event.request);
+      return response || fetch(event.request);
     })
   );
 });
